@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Dynamic Web Fundamentals – Naomi Oginni</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Your Full Name. A personal profile page featuring web development resources and biography.">
+  <meta name="author" content="Your Full Name">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+      <a href="#" target="_blank">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Naomi Oginni</h1>
+
+    <div class="cards-grid">
+
+      <section class="card">
+        <h2>About Me</h2>
+        <div class="card-body">
+          <div class="about-top">
+            <p>Hello! I am Naomi Oginni from Lagos Nigeria currently learning how to build responsive, dynamic websites using HTML, CSS, and JavaScript. I am passionate about programming and looking forward to become one of the sought after software developer that will build solutions through coding.</p>
+            <img src="images/profile.webp" alt="Profile photo of [Your Name]" width="120" height="150">
+          </div>
+
+          <div class="location-section">
+            <h3>Lagos, Nigeria</h3>
+            <div class="location-info">
+              <figure>
+                <img src="images/flag.png" alt="Official Flag of [Your Country]" width="120" height="80">
+                <figcaption>Official Flag of Nigeria</figcaption>
+              </figure>
+              <p>Nigeria is a great country and one of the most dynamic nations on the African continent. Often called the "Giant of Africa," it stands tall as the most populous country in Africa (over 220 million people) and a powerhouse of natural resources, human capital, innovation, and cultural influence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Web Dev Resources</h2>
+        <div class="card-body">
+          <ul class="resources-list">
+            <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+            <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+            <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+            <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+            <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+            <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy;<span id="currentyear"></span> &#127804; Naomi Oginni &#127804; Nigeria
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
