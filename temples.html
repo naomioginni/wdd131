@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)" />
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h2 class="logo">Temple Album</h2>
+      <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <nav id="main-nav">
+        <a href="#">Home</a>
+        <a href="#">Old</a>
+        <a href="#">New</a>
+        <a href="#">Large</a>
+        <a href="#">Small</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <div class="gallery">
+
+      <figure>
+  <img src="images/diego.jpeg" alt="San Diego California Temple" loading="lazy" />
+  <figcaption>San Diego California</figcaption>
+</figure>
+
+<figure>
+  <img src="images/utah.jpeg" alt="Salt Lake Temple" loading="lazy" />
+  <figcaption>Salt Lake City Utah</figcaption>
+</figure>
+
+<figure>
+  <img src="images/washington.jpg" alt="Washington D.C. Temple" loading="lazy" />
+  <figcaption>Washington D.C.</figcaption>
+</figure>
+
+<figure>
+  <img src="images/provo.jpg" alt="Provo City Center Temple" loading="lazy" />
+  <figcaption>Provo City Center Utah</figcaption>
+</figure>
+
+<figure>
+  <img src="images/rome.jpg" alt="Rome Italy Temple" loading="lazy" />
+  <figcaption>Rome Italy</figcaption>
+</figure>
+
+<figure>
+  <img src="images/nauvoo.jpg" alt="Nauvoo Illinois Temple" loading="lazy" />
+  <figcaption>Nauvoo Illinois</figcaption>
+</figure>
+
+<figure>
+  <img src="images/los-angeles.jpg" alt="Los Angeles California Temple" loading="lazy" />
+  <figcaption>Los Angeles California</figcaption>
+</figure>
+
+<figure>
+  <img src="images/tokyo.jpg" alt="Tokyo Japan Temple" loading="lazy" />
+  <figcaption>Tokyo Japan</figcaption>
+</figure>
+
+<figure>
+  <img src="images/mexico.jpg" alt="Mexico City Mexico Temple" loading="lazy" />
+  <figcaption>Mexico City Mexico</figcaption>
+</figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy;<span id="currentyear"></span> &#127804; Naomi Oginni &#127804; Nigeria
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

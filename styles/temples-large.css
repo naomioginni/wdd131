@@ -1,0 +1,59 @@
+/* ============================================================
+   temples-large.css  –  Larger screen overrides (≥ 768 px)
+   Loaded via <link media="(min-width: 768px)">
+   ============================================================ */
+
+/* ---------- Header / Nav – show full nav, hide hamburger ---------- */
+#hamburger {
+  display: none;
+}
+
+nav#main-nav {
+  /* reset the mobile slide-down behaviour */
+  position: static;
+  flex-direction: row;
+  max-height: none;
+  overflow: visible;
+  background: transparent;
+  gap: var(--nav-gap);
+  padding: 0;
+  width: auto;
+}
+
+nav#main-nav a {
+  padding: 0.3rem 0.1rem;
+  font-size: 0.9rem;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+nav#main-nav a:hover,
+nav#main-nav a:focus-visible {
+  background: transparent;
+  color: #d4b8ff;
+  border-bottom-color: #d4b8ff;
+}
+
+/* ---------- Main / Gallery – 3-column grid ---------- */
+main {
+  padding: 2.5rem 2rem 4rem;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.75rem;
+}
+
+/* ---------- Figure images look crisp at larger size ---------- */
+figure img {
+  aspect-ratio: 4 / 3;
+}
+
+figcaption {
+  font-size: 0.78rem;
+}
