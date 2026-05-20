@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigeria – The Giant of Africa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1 class="site-title">Nigeria</h1>
+      <p class="site-subtitle">The Giant of Africa</p>
+    </div>
+  </header>
+
+  <!-- HERO IMAGE (srcset responsive) -->
+  <section class="hero">
+    <picture>
+      <source media="(min-width: 768px)" srcset="images/nigeria-large.webp" />
+      <img src="images/nigeria-small.webp" alt="Beautiful landscape of Nigeria" class="hero-img" />
+    </picture>
+    <div class="hero-overlay">
+      <p class="hero-tagline">Unity &bull; Faith &bull; Peace &bull; Progress</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="content-grid">
+
+      <!-- LEFT: About Section -->
+      <section class="about card">
+        <h2>About Nigeria</h2>
+        <p>Nigeria, officially the Federal Republic of Nigeria, is a country in West Africa. It is the most populous country in Africa and the sixth most populous in the world, with over 220 million people.</p>
+        <p>Nigeria is a federal republic comprising 36 states and the Federal Capital Territory, where the capital, Abuja, is located. The largest city is Lagos, one of the largest urban areas in the world.</p>
+        <ul class="facts">
+          <li><span class="label">Capital</span><span class="value">Abuja</span></li>
+          <li><span class="label">Population</span><span class="value">~220 Million</span></li>
+          <li><span class="label">Area</span><span class="value">923,768 km²</span></li>
+          <li><span class="label">Language</span><span class="value">English (official)</span></li>
+          <li><span class="label">Currency</span><span class="value">Nigerian Naira (₦)</span></li>
+          <li><span class="label">Continent</span><span class="value">Africa</span></li>
+        </ul>
+      </section>
+
+      <!-- RIGHT: Weather Section -->
+      <section class="weather card">
+        <h2 class="weather-heading">Weather</h2>
+        <div class="weather-icon-mobile">
+          <img src="images/weather-icon.svg" alt="Partly Cloudy Weather Icon" />
+        </div>
+        <div class="weather-details">
+          <div class="weather-row">
+            <span class="w-label">Location</span>
+            <span class="w-value">Lagos, Nigeria</span>
+          </div>
+          <div class="weather-row">
+            <span class="w-label">Temperature</span>
+            <span class="w-value" id="temperature">28°C</span>
+          </div>
+          <div class="weather-row">
+            <span class="w-label">Wind Speed</span>
+            <span class="w-value" id="wind-speed">12 km/h</span>
+          </div>
+          <div class="weather-row">
+            <span class="w-label">Conditions</span>
+            <span class="w-value">Partly Cloudy</span>
+          </div>
+          <div class="weather-row highlight">
+            <span class="w-label">Wind Chill</span>
+            <span class="w-value" id="wind-chill">--</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="current-year"></span> 🌍 Naomi Oginni 🌍 Nigeria</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>

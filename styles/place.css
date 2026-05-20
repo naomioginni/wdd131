@@ -1,0 +1,321 @@
+/* ============================================================
+   place.css  –  Nigeria Country Page (Mobile-first)
+   Colors inspired by Nigeria's flag: green & white
+   ============================================================ */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  --clr-green:       #008751;   /* Nigeria flag green */
+  --clr-green-dark:  #005c37;
+  --clr-green-light: #e6f5ee;
+  --clr-gold:        #c8960c;
+  --clr-white:       #ffffff;
+  --clr-bg:          #f4f9f6;
+  --clr-text:        #1a2e22;
+  --clr-text-muted:  #5a7a65;
+  --clr-footer-bg:   #00401a;
+  --clr-footer-txt:  #d4edda;
+  --clr-card-border: #b8ddc8;
+  --font-display:    'Playfair Display', serif;
+  --font-body:       'Source Sans 3', sans-serif;
+  --radius:          10px;
+  --shadow:          0 4px 20px rgba(0, 135, 81, 0.12);
+  --transition:      0.25s ease;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  padding: 1.5rem 1.25rem 1.2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 2px,
+    transparent 2px,
+    transparent 12px
+  );
+}
+
+.header-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.site-subtitle {
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-top: 0.4rem;
+  font-weight: 300;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 320px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,65,26,0.75));
+  padding: 1.5rem 1.25rem 1rem;
+}
+
+.hero-tagline {
+  color: rgba(255,255,255,0.92);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* ---------- Main ---------- */
+main {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.1rem 3rem;
+}
+
+/* ---------- Content Grid (mobile: single column) ---------- */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--clr-card-border);
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.4rem;
+}
+
+/* ---------- About Section ---------- */
+.about h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--clr-green-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--clr-green);
+}
+
+.about p {
+  font-size: 0.95rem;
+  color: var(--clr-text);
+  margin-bottom: 0.9rem;
+}
+
+.facts {
+  list-style: none;
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1rem;
+}
+
+.facts li {
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-green-light);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--clr-green);
+}
+
+.facts .label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-text-muted);
+  font-weight: 600;
+}
+
+.facts .value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--clr-green-dark);
+}
+
+/* ---------- Weather Section ---------- */
+.weather h2.weather-heading {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--clr-green-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--clr-green);
+}
+
+/* Pseudo-element weather icon for large view (hidden on mobile) */
+.weather h2.weather-heading::after {
+  content: '⛅';
+  display: none;
+  margin-left: 0.5rem;
+  font-size: 1.4rem;
+}
+
+/* SVG icon for mobile */
+.weather-icon-mobile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.weather-icon-mobile img {
+  width: 72px;
+  height: 72px;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.weather-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: var(--clr-green-light);
+  font-size: 0.92rem;
+}
+
+.weather-row.highlight {
+  background: var(--clr-green);
+  color: var(--clr-white);
+}
+
+.weather-row.highlight .w-label,
+.weather-row.highlight .w-value {
+  color: var(--clr-white);
+}
+
+.w-label {
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.w-value {
+  font-weight: 600;
+  color: var(--clr-green-dark);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--clr-footer-bg);
+  color: var(--clr-footer-txt);
+  text-align: center;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.9;
+  font-family: var(--font-body);
+}
+
+footer p:last-child {
+  color: #f0c040;
+  font-weight: 700;
+}
+
+/* ============================================================
+   MEDIA QUERY – Larger screens (≥ 768px)
+   ============================================================ */
+@media (min-width: 768px) {
+
+  .site-title { font-size: 3.8rem; }
+
+  .hero { max-height: 480px; }
+  .hero-img { height: 480px; }
+
+  .hero-tagline { font-size: 1rem; letter-spacing: 0.2em; }
+
+  /* Two-column layout */
+  .content-grid {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .about h2,
+  .weather h2.weather-heading {
+    font-size: 1.8rem;
+  }
+
+  /* Show pseudo-element icon, hide SVG img */
+  .weather h2.weather-heading::after {
+    display: inline;
+  }
+
+  .weather-icon-mobile {
+    display: none;
+  }
+
+  .facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main {
+    padding: 2.5rem 2rem 4rem;
+  }
+}
