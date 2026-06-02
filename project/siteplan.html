@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - Explore Lagos</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables for Color Schema */
+        :root {
+            --primary-color: #008751; /* Deep Green */
+            --secondary-color: #F2C94C; /* Golden Yellow */
+            --background-color: #F9F9F9; /* Off-White */
+            --text-color: #333333; /* Dark Charcoal */
+        }
+
+        /* Typography and Base Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        /* Color Swatch Styling */
+        .color-swatches {
+            display: flex;
+            gap: 15px;
+        }
+
+        .swatch {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .swatch.primary { background-color: var(--primary-color); }
+        .swatch.secondary { background-color: var(--secondary-color); color: black; text-shadow: none; }
+        .swatch.bg { background-color: var(--background-color); color: black; text-shadow: none; border: 1px solid #ccc; }
+        .swatch.text { background-color: var(--text-color); }
+
+        /* Wireframe Styling */
+        .wireframe-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .wireframe-box {
+            border: 2px dashed var(--text-color);
+            padding: 20px;
+            background-color: var(--background-color);
+            text-align: center;
+        }
+
+        .mobile-view { width: 250px; height: 400px; }
+        .desktop-view { width: 500px; height: 400px; }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Site Plan: Explore Lagos</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Name:</strong> Explore Lagos</p>
+            <p><strong>Reason:</strong> This name is simple, action-oriented, and immediately tells the visitor the purpose of the website. It is easy to remember for tourists planning a trip.</p>
+            <p><strong>Optional Domain:</strong> explore-lagos-guide.com</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The site serves as a digital weekend guide for visitors to Lagos, Nigeria. It provides curated recommendations for top attractions, authentic local dining, and practical transportation tips to help tourists navigate the city safely and enjoyably. It will also feature an interactive packing list built with JavaScript.</p>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <p>These are questions our target audience (tourists and weekend visitors) will be asking when they arrive on the site:</p>
+            <ul>
+                <li>What are the best places to eat authentic Nigerian food near Victoria Island?</li>
+                <li>How do I safely navigate transportation from the airport to my hotel?</li>
+                <li>What essential items should I pack for a weekend trip during the rainy season?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <p>The colors are inspired by the Nigerian flag (Green) and the vibrant, sunny energy of the city (Gold). Notice that this site plan document is styled using these exact colors.</p>
+            <div class="color-swatches">
+                <div class="swatch primary">Primary<br>#008751</div>
+                <div class="swatch secondary">Secondary<br>#F2C94C</div>
+                <div class="swatch bg">Background<br>#F9F9F9</div>
+                <div class="swatch text">Text<br>#333333</div>
+            </div>
+            <ul>
+                <li><strong>Primary (Deep Green):</strong> Used for the header background, major headings, and primary buttons.</li>
+                <li><strong>Secondary (Golden Yellow):</strong> Used for accents, section dividers, and hover effects on links.</li>
+                <li><strong>Background (Off-White):</strong> Used for the main body background to keep the site looking clean without the harshness of pure white.</li>
+                <li><strong>Text (Dark Charcoal):</strong> Used for all paragraph text to ensure high contrast and readability.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p>We are using two Google Fonts for a clean, modern look. These fonts are actively applied to this document.</p>
+            <ul>
+                <li><strong>Heading Font:</strong> 'Montserrat', sans-serif. Applied to h1, h2, and h3 elements for a bold, structural look.</li>
+                <li><strong>Body Font:</strong> 'Open Sans', sans-serif. Applied to all paragraphs and lists for excellent readability on small screens.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            <p>Below are basic structural representations of the home page layout. You can also sketch these out on paper, but these CSS boxes represent the grid structure.</p>
+            <div class="wireframe-container">
+                <div class="wireframe-box mobile-view">
+                    <h3>Mobile View</h3>
+                    <p>[ Header & Nav (Stacked) ]</p>
+                    <p>[ Hero Image ]</p>
+                    <p>[ Welcome Text ]</p>
+                    <p>[ Attraction 1 ]</p>
+                    <p>[ Attraction 2 ]</p>
+                    <p>[ Footer ]</p>
+                </div>
+                <div class="wireframe-box desktop-view">
+                    <h3>Desktop View</h3>
+                    <p>[ Header | Logo ............ Nav Links ]</p>
+                    <p>[ Wide Hero Image with Call to Action ]</p>
+                    <p>[ Welcome Text ]</p>
+                    <p>[ Attr 1 ] | [ Attr 2 ] | [ Attr 3 ]</p>
+                    <p>[ Footer ]</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Explore Lagos Project Plan</p>
+    </footer>
+
+</body>
+</html>
