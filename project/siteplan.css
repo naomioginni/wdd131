@@ -1,0 +1,108 @@
+/* Typography and Base Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F9F9F9;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #008751;
+}
+
+header {
+    background-color: #008751;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #F2C94C;
+}
+
+/* Color Swatch Styling */
+.color-swatches {
+    display: flex;
+}
+
+.swatch {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px; /* Replaces flex gap to satisfy older validators */
+}
+
+.swatch.primary { 
+    background-color: #008751; 
+}
+
+.swatch.secondary { 
+    background-color: #F2C94C; 
+    color: black; 
+}
+
+.swatch.bg { 
+    background-color: #F9F9F9; 
+    color: black; 
+    border: 1px solid #ccc; 
+}
+
+.swatch.text { 
+    background-color: #333333; 
+}
+
+/* Wireframe Styling */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wireframe-box {
+    border: 2px dashed #333333;
+    padding: 20px;
+    background-color: #F9F9F9;
+    text-align: center;
+    margin-right: 20px; /* Replaces flex gap to satisfy older validators */
+    margin-bottom: 20px;
+}
+
+.mobile-view { 
+    width: 250px; 
+    height: 400px; 
+}
+
+.desktop-view { 
+    width: 500px; 
+    height: 400px; 
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
