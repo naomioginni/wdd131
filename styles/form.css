@@ -1,0 +1,376 @@
+/* ============================================================
+   form.css – Product Review Form  (Mobile-first)
+   Deep plum & warm cream color scheme
+   ============================================================ */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  --clr-primary:     #3b0a45;
+  --clr-primary-lt:  #5c1a6e;
+  --clr-accent:      #9b4dca;
+  --clr-accent-lt:   #c89be0;
+  --clr-bg:          #f5f0f7;
+  --clr-surface:     #ffffff;
+  --clr-border:      #d5c3e0;
+  --clr-text:        #1e0a2e;
+  --clr-muted:       #7a5c8a;
+  --clr-optional:    #7a5c8a;
+  --clr-footer-bg:   #1e0a2e;
+  --clr-footer-txt:  #e8d5f5;
+  --clr-star:        #c8960c;
+  --clr-success:     #2e7d32;
+  --font-display:    'Playfair Display', serif;
+  --font-body:       'Source Sans 3', sans-serif;
+  --radius:          8px;
+  --shadow:          0 4px 20px rgba(59, 10, 69, 0.12);
+  --transition:      0.2s ease;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--clr-primary);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+/* ---------- Main ---------- */
+main {
+  flex: 1;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ---------- Form ---------- */
+form {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--clr-border);
+}
+
+/* ---------- Form Groups ---------- */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Labels ---------- */
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--clr-text);
+  margin-bottom: 0.45rem;
+}
+
+.optional {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--clr-optional);
+  margin-left: 0.3rem;
+}
+
+/* ---------- Inputs, Select, Textarea ---------- */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--clr-text);
+  background: var(--clr-surface);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  appearance: auto;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--clr-accent);
+  box-shadow: 0 0 0 3px rgba(155, 77, 202, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ---------- Fieldsets ---------- */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--clr-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+legend em {
+  font-weight: 400;
+  color: var(--clr-muted);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+/* ---------- Star Rating ---------- */
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.star-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.star-option label {
+  font-size: 1rem;
+  color: var(--clr-star);
+  cursor: pointer;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  transition: transform var(--transition);
+}
+
+.star-option label:hover {
+  transform: scale(1.15);
+}
+
+.star-option input[type="radio"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--clr-accent);
+  cursor: pointer;
+}
+
+/* ---------- Checkboxes ---------- */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.25rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 600;
+  font-size: 0.93rem;
+  cursor: pointer;
+  color: var(--clr-text);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--clr-accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-label span {
+  line-height: 1;
+}
+
+/* ---------- Submit Button ---------- */
+input[type="submit"] {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: var(--clr-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus-visible {
+  background-color: var(--clr-primary-lt);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--clr-footer-bg);
+  color: var(--clr-footer-txt);
+  text-align: center;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.9;
+}
+
+footer p:last-child {
+  color: #f0c040;
+  font-weight: 700;
+}
+
+/* ============================================================
+   CONFIRMATION PAGE STYLES
+   ============================================================ */
+.confirmation-page main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.confirmation-card {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--clr-border);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.checkmark {
+  width: 64px;
+  height: 64px;
+  background: var(--clr-success);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.25rem;
+}
+
+.confirmation-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--clr-primary);
+  margin-bottom: 0.5rem;
+}
+
+.confirm-msg {
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-counter {
+  background: var(--clr-bg);
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.counter-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-muted);
+  font-weight: 600;
+}
+
+.counter-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--clr-primary);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.back-btn {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--clr-primary-lt);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   MEDIA QUERY – Larger screens (≥ 600px)
+   ============================================================ */
+@media (min-width: 600px) {
+  header h1 { font-size: 2.5rem; }
+
+  form { padding: 2.5rem 2rem; }
+
+  .star-rating { gap: 1rem; }
+
+  .star-option label { font-size: 1.1rem; }
+
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+  }
+}

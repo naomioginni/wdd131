@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Submit a product review for our featured products. Rate your experience, share useful features, and help others make informed decisions." />
+  <meta name="author" content="Naomi Oginni" />
+  <title>Product Review Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html" id="review-form">
+
+      <!-- Product Name -->
+      <div class="form-group">
+        <label for="product-name">Product Name</label>
+        <select id="product-name" name="productName" required>
+          <option value="" disabled selected>Select a Product ...</option>
+          <!-- Options populated by JavaScript -->
+        </select>
+      </div>
+
+      <!-- Overall Rating -->
+      <div class="form-group">
+        <fieldset class="rating-fieldset">
+          <legend>Overall Rating</legend>
+          <div class="star-rating">
+            <div class="star-option">
+              <label for="rating1">&#9734;</label>
+              <input type="radio" id="rating1" name="rating" value="1" required />
+            </div>
+            <div class="star-option">
+              <label for="rating2">&#9734;&#9734;</label>
+              <input type="radio" id="rating2" name="rating" value="2" />
+            </div>
+            <div class="star-option">
+              <label for="rating3">&#9734;&#9734;&#9734;</label>
+              <input type="radio" id="rating3" name="rating" value="3" />
+            </div>
+            <div class="star-option">
+              <label for="rating4">&#9734;&#9734;&#9734;&#9734;</label>
+              <input type="radio" id="rating4" name="rating" value="4" />
+            </div>
+            <div class="star-option">
+              <label for="rating5">&#9734;&#9734;&#9734;&#9734;&#9734;</label>
+              <input type="radio" id="rating5" name="rating" value="5" />
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Date of Installation -->
+      <div class="form-group">
+        <label for="install-date">Date of Installation</label>
+        <input type="date" id="install-date" name="installDate" required />
+      </div>
+
+      <!-- Useful Features -->
+      <div class="form-group">
+        <fieldset class="checkbox-fieldset">
+          <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="durability" name="features" value="durability" />
+              <span>Durability</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="ease-of-use" name="features" value="ease-of-use" />
+              <span>Ease of Use</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="performance" name="features" value="performance" />
+              <span>Performance</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="design" name="features" value="design" />
+              <span>Design</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Written Review -->
+      <div class="form-group">
+        <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
+        <textarea id="written-review" name="writtenReview" rows="5" placeholder="Share your experience with this product..."></textarea>
+      </div>
+
+      <!-- User Name -->
+      <div class="form-group">
+        <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
+        <input type="text" id="user-name" name="userName" placeholder="Enter your name" />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Post Review" id="submit-btn" />
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="current-year"></span> 🌍 Naomi Oginni 🌍 Nigeria</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
