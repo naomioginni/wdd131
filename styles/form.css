@@ -19,10 +19,14 @@
   --clr-footer-txt:  #e8d5f5;
   --clr-star:        #c8960c;
   --clr-success:     #2e7d32;
+  --clr-white:       #ffffff;
+  --clr-gold:        #f0c040;
+  --shadow-focus:    var(--shadow-focus);
+  --shadow-dark:     var(--shadow-dark);
   --font-display:    'Playfair Display', serif;
   --font-body:       'Source Sans 3', sans-serif;
   --radius:          8px;
-  --shadow:          0 4px 20px rgba(59, 10, 69, 0.12);
+  --shadow:          var(--shadow-dark);
   --transition:      0.2s ease;
 }
 
@@ -48,7 +52,7 @@ body {
 /* ---------- Header ---------- */
 header {
   background-color: var(--clr-primary);
-  color: #fff;
+  color: var(--clr-white);
   text-align: center;
   padding: 1.5rem 1.25rem;
 }
@@ -126,7 +130,7 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: var(--clr-accent);
-  box-shadow: 0 0 0 3px rgba(155, 77, 202, 0.15);
+  box-shadow: var(--shadow-focus);
 }
 
 textarea {
@@ -198,17 +202,13 @@ legend em {
   margin-top: 0.25rem;
 }
 
-.checkbox-label {
+.checkbox-item {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  font-weight: 600;
-  font-size: 0.93rem;
-  cursor: pointer;
-  color: var(--clr-text);
 }
 
-.checkbox-label input[type="checkbox"] {
+.checkbox-item input[type="checkbox"] {
   width: 1.2rem;
   height: 1.2rem;
   accent-color: var(--clr-accent);
@@ -216,8 +216,12 @@ legend em {
   flex-shrink: 0;
 }
 
-.checkbox-label span {
-  line-height: 1;
+.checkbox-item label {
+  font-weight: 600;
+  font-size: 0.93rem;
+  cursor: pointer;
+  color: var(--clr-text);
+  margin-bottom: 0;
 }
 
 /* ---------- Submit Button ---------- */
@@ -225,7 +229,7 @@ input[type="submit"] {
   width: 100%;
   padding: 0.85rem;
   background-color: var(--clr-primary);
-  color: #fff;
+  color: var(--clr-white);
   border: none;
   border-radius: var(--radius);
   font-family: var(--font-display);
@@ -254,7 +258,7 @@ footer {
 }
 
 footer p:last-child {
-  color: #f0c040;
+  color: var(--clr-gold);
   font-weight: 700;
 }
 
@@ -289,7 +293,7 @@ footer p:last-child {
   width: 64px;
   height: 64px;
   background: var(--clr-success);
-  color: #fff;
+  color: var(--clr-white);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -342,7 +346,7 @@ footer p:last-child {
 .back-btn {
   display: inline-block;
   background: var(--clr-primary);
-  color: #fff;
+  color: var(--clr-white);
   text-decoration: none;
   padding: 0.7rem 1.75rem;
   border-radius: var(--radius);
