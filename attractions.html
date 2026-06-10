@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plan your weekend trip to Lagos, Nigeria. Use our interactive packing list, travel tips, and contact form to prepare your perfect itinerary.">
+    <meta name="description" content="Top tourist attractions and must-see places to visit in Lagos, Nigeria — Lekki Conservation Centre, Nike Art Gallery, Tarkwa Bay, and more.">
     <meta name="author" content="Naomi Oginni">
-    <title>Explore Lagos | Plan Your Trip</title>
+    <title>Explore Lagos | Weekend Travel Guide — Attractions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 
     <header>
         <nav aria-label="Main navigation">
-            <div class="logo" aria-label="Explore Lagos">Explore Lagos</div>
+            <div class="logo" role="img" aria-label="Explore Lagos — Weekend Travel Guide">Explore Lagos</div>
             <div class="links">
                 <a href="project.html">Home</a>
                 <a href="attractions.html">Attractions</a>
@@ -31,115 +31,80 @@
 
         <!-- Page Header -->
         <div class="page-header">
-            <h1>Plan Your Weekend</h1>
-            <p>Everything you need to prepare for an unforgettable Lagos experience — from packing lists to local tips.</p>
+            <h1>Must-See Attractions</h1>
+            <p>Lagos is a city that never sleeps. Here are the top places you must visit during your weekend trip.</p>
         </div>
 
-        <!-- Packing Widget + Contact Form -->
-        <div class="planning-grid">
+        <!-- Attraction Cards -->
+        <section aria-label="Top attractions in Lagos">
+            <div class="grid">
 
-            <!-- JavaScript Interactive Widget -->
-            <section class="js-widget" aria-labelledby="packing-title">
-                <h2 id="packing-title">🧳 Interactive Packing List</h2>
-                <p>Check off your items as you pack. Your progress is saved automatically!</p>
-                <p class="packing-progress" aria-live="polite"><span>0</span> / 0 items packed</p>
+                <article class="card">
+                    <img 
+                        src="https://images.unsplash.com/photo-1618828665011-0abd973f7bb8?auto=format&fit=crop&w=600&q=80" 
+                        alt="Elevated canopy walkway through dense green forest at Lekki Conservation Centre"
+                        loading="lazy"
+                        width="600" height="210">
+                    <span class="attraction-badge">Nature</span>
+                    <h2>Lekki Conservation Centre</h2>
+                    <p>Escape the city noise and walk the 401-metre canopy walkway — the longest in Africa. Spot green monkeys, crocodiles, and rare birds on guided nature trails through mangrove forests.</p>
+                </article>
 
-                <div id="packing-list" role="list">
-                    <!-- JavaScript renders items here -->
-                </div>
+                <article class="card">
+                    <img 
+                        src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=600&q=80" 
+                        alt="Colourful hand-woven baskets and traditional Nigerian artworks displayed at Nike Art Gallery"
+                        loading="lazy"
+                        width="600" height="210">
+                    <span class="attraction-badge">Culture</span>
+                    <h2>Nike Art Gallery</h2>
+                    <p>A spectacular five-story building in Lekki holding one of Africa's largest collections of Nigerian paintings, textiles, batik, and sculptures. The founder, Chief Nike Davies-Okundaye, often visits in person.</p>
+                </article>
 
-                <div class="add-item-row">
-                    <input 
-                        type="text" 
-                        id="new-item" 
-                        placeholder="Add a new item..."
-                        aria-label="New packing list item">
-                    <button id="add-btn" type="button">Add Item</button>
-                </div>
-            </section>
+                <article class="card">
+                    <img 
+                        src="https://images.unsplash.com/photo-1588614959060-4d144f28b207?auto=format&fit=crop&w=600&q=80" 
+                        alt="Calm blue waters of Tarkwa Bay with fishing boats along the shore at sunset"
+                        loading="lazy"
+                        width="600" height="210">
+                    <span class="attraction-badge">Beach</span>
+                    <h2>Tarkwa Bay Beach</h2>
+                    <p>An idyllic, sheltered beach accessible only by a 10-minute water taxi from Bar Beach. The calm waves make it perfect for swimming, and the vibe is laid-back compared to busier Lagos beaches.</p>
+                </article>
 
-            <!-- Contact Form -->
-            <section class="form-container" aria-labelledby="form-title">
-                <h2 id="form-title">✉️ Ask a Local</h2>
-                <p>Have questions about safety, currency, or transportation? Our team of Lagos locals is here to help.</p>
+                <article class="card">
+                    <img 
+                        src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
+                        alt="Plates of Nigerian food including Jollof rice and Suya skewers"
+                        loading="lazy"
+                        width="600" height="210">
+                    <span class="attraction-badge">Food</span>
+                    <h2>Victoria Island Food Scene</h2>
+                    <p>VI is home to hundreds of restaurants serving everything from smoky roadside Suya to high-end Nigerian fusion. Don't leave without trying Buka-style Pepper Soup and fresh Coconut rice.</p>
+                </article>
 
-                <div class="form-success" role="alert" aria-live="polite"></div>
+                <article class="card">
+                    <img 
+                        src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?auto=format&fit=crop&w=600&q=80"
+                        alt="Colourful Lagos market stalls filled with fabrics and everyday goods"
+                        loading="lazy"
+                        width="600" height="210">
+                    <span class="attraction-badge">Shopping</span>
+                    <h2>Balogun Market</h2>
+                    <p>One of the largest open-air markets in West Africa. Shop for vibrant Ankara fabrics, handmade jewellery, leather goods, and traditional Yoruba attire at unbeatable prices.</p>
+                </article>
 
-                <form action="#" method="get" novalidate>
-                    <label for="name">Your Name</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        placeholder="e.g. Amara Johnson"
-                        autocomplete="name"
-                        required>
+                <article class="card">
+                    <img 
+                        src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80"
+                        alt="A lively rooftop bar with city lights and music at night in Lagos"
+                        loading="lazy"
+                        width="600" height="210">
+                    <span class="attraction-badge">Nightlife</span>
+                    <h2>Afrobeats Nightlife</h2>
+                    <p>Lagos is the birthplace of Afrobeats. Experience the city after dark at iconic venues in Lekki and VI, where local DJs spin Burna Boy, Wizkid, and Davido until sunrise.</p>
+                </article>
 
-                    <label for="email">Email Address</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="you@example.com"
-                        autocomplete="email"
-                        required>
-
-                    <label for="topic">Topic</label>
-                    <select id="topic" name="topic">
-                        <option value="">Select a topic...</option>
-                        <option value="safety">Safety &amp; Travel Tips</option>
-                        <option value="transport">Getting Around Lagos</option>
-                        <option value="currency">Currency &amp; Payment</option>
-                        <option value="food">Food Recommendations</option>
-                        <option value="other">Other</option>
-                    </select>
-
-                    <label for="message">Your Question</label>
-                    <textarea 
-                        id="message" 
-                        name="message" 
-                        rows="4" 
-                        placeholder="What would you like to know?"
-                        required></textarea>
-
-                    <button type="submit">Send Message</button>
-                </form>
-            </section>
-
-        </div>
-
-        <!-- Travel Tips -->
-        <section class="tips-section" aria-labelledby="tips-title">
-            <h2 class="section-title" id="tips-title">Essential Travel Tips</h2>
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <span class="tip-icon" aria-hidden="true">🏧</span>
-                    <div>
-                        <h3>Currency</h3>
-                        <p>The Nigerian Naira (₦) is the local currency. Carry cash for markets and street food. ATMs are widely available on Victoria Island and in Lekki.</p>
-                    </div>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-icon" aria-hidden="true">🚕</span>
-                    <div>
-                        <h3>Getting Around</h3>
-                        <p>Use Bolt or Uber for safe, metered rides. Avoid using unregistered taxis. Lagos traffic (known as "go-slow") is worst on weekday mornings and evenings.</p>
-                    </div>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-icon" aria-hidden="true">🌡️</span>
-                    <div>
-                        <h3>Weather</h3>
-                        <p>Lagos is tropical year-round, averaging 27°C. The rainy season runs from May to October. Always pack a light rain jacket and stay hydrated.</p>
-                    </div>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-icon" aria-hidden="true">🔒</span>
-                    <div>
-                        <h3>Safety</h3>
-                        <p>Lagos is generally safe for tourists in areas like Lekki, VI, and Ikoyi. Keep your belongings secure, avoid late-night walks, and trust your instincts.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -149,7 +114,7 @@
         <p>&copy; 2026 Explore Lagos by Naomi Oginni</p>
         <p>
             <a href="references.html">References</a> | 
-            <a href="siteplan.html">Site Plan</a>
+            <a href="project/siteplan.html">Site Plan</a>
         </p>
     </footer>
 
