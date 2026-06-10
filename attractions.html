@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan your weekend trip to Lagos, Nigeria. Use our interactive packing list, travel tips, and contact form to prepare your perfect itinerary.">
+    <meta name="author" content="Naomi Oginni">
+    <title>Explore Lagos | Plan Your Trip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="logo" aria-label="Explore Lagos">Explore Lagos</div>
+            <div class="links">
+                <a href="project.html">Home</a>
+                <a href="attractions.html">Attractions</a>
+                <a href="planning.html">Plan Your Trip</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Plan Your Weekend</h1>
+            <p>Everything you need to prepare for an unforgettable Lagos experience — from packing lists to local tips.</p>
+        </div>
+
+        <!-- Packing Widget + Contact Form -->
+        <div class="planning-grid">
+
+            <!-- JavaScript Interactive Widget -->
+            <section class="js-widget" aria-labelledby="packing-title">
+                <h2 id="packing-title">🧳 Interactive Packing List</h2>
+                <p>Check off your items as you pack. Your progress is saved automatically!</p>
+                <p class="packing-progress" aria-live="polite"><span>0</span> / 0 items packed</p>
+
+                <div id="packing-list" role="list">
+                    <!-- JavaScript renders items here -->
+                </div>
+
+                <div class="add-item-row">
+                    <input 
+                        type="text" 
+                        id="new-item" 
+                        placeholder="Add a new item..."
+                        aria-label="New packing list item">
+                    <button id="add-btn" type="button">Add Item</button>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="form-container" aria-labelledby="form-title">
+                <h2 id="form-title">✉️ Ask a Local</h2>
+                <p>Have questions about safety, currency, or transportation? Our team of Lagos locals is here to help.</p>
+
+                <div class="form-success" role="alert" aria-live="polite"></div>
+
+                <form action="#" method="get" novalidate>
+                    <label for="name">Your Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="e.g. Amara Johnson"
+                        autocomplete="name"
+                        required>
+
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required>
+
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic">
+                        <option value="">Select a topic...</option>
+                        <option value="safety">Safety &amp; Travel Tips</option>
+                        <option value="transport">Getting Around Lagos</option>
+                        <option value="currency">Currency &amp; Payment</option>
+                        <option value="food">Food Recommendations</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">Your Question</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="4" 
+                        placeholder="What would you like to know?"
+                        required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+
+        </div>
+
+        <!-- Travel Tips -->
+        <section class="tips-section" aria-labelledby="tips-title">
+            <h2 class="section-title" id="tips-title">Essential Travel Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-icon" aria-hidden="true">🏧</span>
+                    <div>
+                        <h3>Currency</h3>
+                        <p>The Nigerian Naira (₦) is the local currency. Carry cash for markets and street food. ATMs are widely available on Victoria Island and in Lekki.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon" aria-hidden="true">🚕</span>
+                    <div>
+                        <h3>Getting Around</h3>
+                        <p>Use Bolt or Uber for safe, metered rides. Avoid using unregistered taxis. Lagos traffic (known as "go-slow") is worst on weekday mornings and evenings.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon" aria-hidden="true">🌡️</span>
+                    <div>
+                        <h3>Weather</h3>
+                        <p>Lagos is tropical year-round, averaging 27°C. The rainy season runs from May to October. Always pack a light rain jacket and stay hydrated.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon" aria-hidden="true">🔒</span>
+                    <div>
+                        <h3>Safety</h3>
+                        <p>Lagos is generally safe for tourists in areas like Lekki, VI, and Ikoyi. Keep your belongings secure, avoid late-night walks, and trust your instincts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Explore Lagos by Naomi Oginni</p>
+        <p>
+            <a href="references.html">References</a> | 
+            <a href="siteplan.html">Site Plan</a>
+        </p>
+    </footer>
+
+</body>
+</html>

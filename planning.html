@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan your trip to Lagos, Nigeria. Use our interactive packing list and contact form.">
+    <meta name="author" content="Naomi Oginni">
+    <title>Explore Lagos | Plan Your Trip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Explore Lagos</div>
+            <div class="links">
+                <a href="project.html">Home</a>
+                <a href="attractions.html">Attractions</a>
+                <a href="planning.html">Plan Your Trip</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Plan Your Weekend</h1>
+        
+        <div class="grid">
+            <!-- JavaScript Interactive Widget -->
+            <section class="js-widget">
+                <h2>Interactive Packing List</h2>
+                <p>Check off your items. We will save your list even if you refresh the page!</p>
+                
+                <div id="packing-list">
+                    <!-- JavaScript will inject the list here -->
+                </div>
+                
+                <div style="margin-top: 15px;">
+                    <input type="text" id="new-item" placeholder="Add a new item...">
+                    <button id="add-btn">Add Item</button>
+                </div>
+            </section>
+
+            <!-- Required HTML Form -->
+            <section class="form-container">
+                <h2>Ask a Local</h2>
+                <p>Have questions about safety, transportation, or currency? Send us a message.</p>
+                <form action="#" method="get">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Your Question:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Explore Lagos by Naomi Oginni</p>
+        <p><a href="references.html">References</a> | <a href="siteplan.html">Site Plan</a></p>
+    </footer>
+
+</body>
+</html>
